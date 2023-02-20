@@ -1,10 +1,14 @@
 # browser-chatgptapi
 
-将网页版ChatGPT做成API
+将网页版ChatGPT做成API，
+
+**真实模型，不限字数，支持记忆，无限查询量**
 
 
 ### 实现思路：
 一个web服务器，chatgpt网页利用注入脚本与服务器通信，接收查询语句并返回,利用sowebscoekt 协议与服务器进行通信。
+
+
 
 
 
