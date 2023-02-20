@@ -92,10 +92,9 @@ async def websocket_endpoint(websocket: WebSocket, user: str):
 
 templates = Jinja2Templates(directory='./')
 
-
 @app.get("/")
 def index(request: Request):
-    api_url = 'ws://192.168.10.106:8010/user/user1'
+    api_url = 'ws://localhost:8010/user/user1'
     return templates.TemplateResponse("index2.html",
                                       {"request": request, 'api_url': api_url})
 
@@ -104,4 +103,4 @@ if __name__ == "__main__":
     import uvicorn
 
     # 官方推荐是用命令后启动 uvicorn main:app --host=127.0.0.1 --port=8010 --reload
-    uvicorn.run('run:app', host='0.0.0.0', port=8010, reload=True, debug=True)
+    uvicorn.run('run:app', host='0.0.0.0', port=8010, reload=True)
