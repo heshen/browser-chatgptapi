@@ -13,7 +13,7 @@
 
 
 
-- ./BrowserScripts.js :导入浏览器脚本管理器
+- ./ChatGptPagesScripts.js :导入浏览器脚本管理器
 - ./run.py web服务
 - ./index.html 一个简单的测试页面
 
