@@ -64,8 +64,8 @@ async def websocket_endpoint(websocket: WebSocket, server: str):
                 await sendto_user(data)
 
     except WebSocketDisconnect:
-        await ws.close()
-        socket_manager['server'] = None
+        # await ws.close()
+        socket_manager.pop('server')
 
 
 @app.websocket("/user/{user}")
@@ -87,10 +87,16 @@ async def websocket_endpoint(websocket: WebSocket, user: str):
                     await ws.send_json({'msg': '请等待上一条消息返回'})
 
     except WebSocketDisconnect:
-        await ws.close()
+
+        print('user disconnected')
+        socket_manager.pop('user')
+
+        # await ws.close()
+
 
 
 templates = Jinja2Templates(directory='./')
+
 
 @app.get("/")
 def index(request: Request):
