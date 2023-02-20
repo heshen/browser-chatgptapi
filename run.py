@@ -69,8 +69,8 @@ async def websocket_endpoint(websocket: WebSocket, server: str):
 
 
 @app.websocket("/user/{user}")
-async def websocket_endpoint(websocket: WebSocket, user: str):
-    ws = websocket
+async def websocket_endpoint(ws: WebSocket, user: str):
+
     await ws.accept()
     socket_manager['user'] = ws
     await ws.send_json({'msg': '连接成功'})
@@ -91,9 +91,6 @@ async def websocket_endpoint(websocket: WebSocket, user: str):
         print('user disconnected')
         socket_manager.pop('user')
 
-        # await ws.close()
-
-
 
 templates = Jinja2Templates(directory='./')
 
@@ -109,4 +106,4 @@ if __name__ == "__main__":
     import uvicorn
 
     # 官方推荐是用命令后启动 uvicorn main:app --host=127.0.0.1 --port=8010 --reload
-    uvicorn.run('run:app', host='0.0.0.0', port=8010, reload=True)
+    uvicorn.run('run:app', host='localhost', port=8010, reload=True,debug=True)
