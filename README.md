@@ -1,11 +1,24 @@
-# chatgt-msg-forward
-fastapi 做一个chatgpt消息转发器
+# browser-chatgptapi
+
+将网页版ChatGPT做成API
+
+
+### 实现思路：
+一个web服务器，chatgpt网页利用注入脚本与服务器通信，接收查询语句并返回,利用sowebscoekt 协议与服务器进行通信。
 
 
 
----
 
-实现思路：
-搭建一个web服务器，并开启两个端口一个服务端口，一个用户端口，这样原则上可以通过将本机web发送到外网供用户连接；chatgpt网页利用油猴子脚本、展示界面利用原生js,两者都利用sowebscoekt 协议与服务器进行通信，这样就服务器就相当于在用户和chatgpt网页做一个消息转发服务。
+- ./BrowserScripts.js :导入浏览器脚本管理器
+- ./run.py web服务
+- ./index.html 一个简单的测试页面
+
+
+### 演示：
+![image](https://user-images.githubusercontent.com/71559822/220007238-2b040e5e-1be7-404e-9cc6-3605f862660d.png)
+
+
+
+
 
 代码比较简单，还有可以完善之处，
