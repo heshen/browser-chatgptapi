@@ -18,11 +18,16 @@
 - ./index.html 一个简单的测试页面
 
 
+
 ### 演示：
 ![image](https://user-images.githubusercontent.com/71559822/220007238-2b040e5e-1be7-404e-9cc6-3605f862660d.png)
 
 
 
+### 架构图
 
+暂时只能单用户，单个ChatGPT,未来看后期发展
 
-代码比较简单，还有可以完善之处，
+![绘图 drawio](https://user-images.githubusercontent.com/71559822/220313843-e7f0f97b-6961-45fe-b7ee-3fbebeb281e4.png)
+
+**代码比较简陋，可完善之处多多，欢迎参与一起开发**
