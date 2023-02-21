@@ -27,7 +27,8 @@
 ### 架构图
 
 暂时只能单用户，单个ChatGPT,未来看后期发展
+![未命名绘图](https://user-images.githubusercontent.com/71559822/220315748-b6bb2d29-0243-4ac8-aab4-0296424689cb.png)
 
-![绘图 drawio](https://user-images.githubusercontent.com/71559822/220313843-e7f0f97b-6961-45fe-b7ee-3fbebeb281e4.png)
+
 
 **代码比较简陋，可完善之处多多，欢迎参与一起开发**
